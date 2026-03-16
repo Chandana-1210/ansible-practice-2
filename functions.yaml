@@ -27,12 +27,12 @@
         msg: "list_tags are: {{ list_tags | items2dict }}"
     - name: read the yaml file and store as variables
       ansible.builtin.set_fact:
-        installation.yaml: "{{ lookup('file','installation.yaml')|from_yaml }}"
+        installation_yaml: "{{ lookup('file','installation.yaml')|from_yaml }}"
     - name: convert to json from yaml file
       ansible.builtin.debug:
-        msg: "{{ installation.yaml | to_json }}"
+        msg: "{{ installation_yaml | to_json }}"
     - name: convert to json file from yaml and save into a file
       ansible.builtin.copy:
         dest: ./installation.json
-        content: "{{ installation.yaml | to_nice_json }}"
+        content: "{{ installation_yaml | to_nice_json }}"
     
