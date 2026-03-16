@@ -4,14 +4,14 @@
   vars:
     technologies: devops,python,java,shell,linux
   
-  tags:
-    Application: python
-    environment: dev 
-  list_tags:
-    - key: Application
-      value: payment
-    - key: environment
-      value: dev
+    tags:
+      Application: python
+      environment: dev 
+    list_tags:
+      - key: Application
+        value: payment
+      - key: environment
+        value: dev
   tasks:
     - name: default variables
       ansible.builtin.debug:
