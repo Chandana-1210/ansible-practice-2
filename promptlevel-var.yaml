@@ -1,6 +1,7 @@
 - name: play level varaiable 
   hosts: local
-  prompt_vars:
+  connection: local 
+  vars_prompt:
     - name: username
       prompt: what is your name
       private: false
