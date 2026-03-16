@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   # ansible gather all info about target server , before executing any other facts
-  task:
+  tasks:
     - name: facts
       ansible.builtin.debug:
         msg: "{{ ansible_facts }}"
