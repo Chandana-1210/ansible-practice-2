@@ -1,5 +1,6 @@
 - name: installing package and starting services
   hosts: frontend
+  become: true
   tasks:
     - name: installing package
       ansible.builtin.package:
