@@ -1,0 +1,5 @@
+- name: basic playbook
+  hosts: frontend
+  tasks:
+    - name: ping 
+      ansible.built.ping:
