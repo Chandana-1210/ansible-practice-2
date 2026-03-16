@@ -1,6 +1,6 @@
 - name: installing mutliple packages
   hosts: local
-  connections: local
+  connection: local
   tasks:
     - name: installing packages
       ansible.builtin.package:
